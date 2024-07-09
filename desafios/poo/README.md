@@ -53,6 +53,42 @@ classDiagram
     iPhone --> NavegadorInternet
 ```
 
+### Resolução do Desafio UML
+
+#### Diagrama UML
+
+```mermaid
+classDiagram
+   class iPhone {
+
+   }
+
+   class ReprodutorMusical {
+      +tocar()
+      +pausar()
+      +selecionarMusica(musica: String)
+   }
+
+   class AparelhoTelefonico {
+      +ligar(numero: String)
+      +atender()
+      +iniciarCorreioVoz()
+   }
+
+   class NavegadorInternet {
+      +exibirPagina(url: String)
+      +adicionarNovaAba()
+      +atualizarPagina()
+   }
+
+
+
+   ReprodutorMusical <|-- iPhone
+   AparelhoTelefonico <|-- iPhone
+   NavegadorInternet <|-- iPhone
+
+```
+
 ### Instruções
 1. Assista ao vídeo do lançamento do iPhone para entender as funcionalidades principais.
 2. Utilize uma ferramenta UML de sua preferência para criar o diagrama das classes e interfaces. Você pode utilizar o modelo acima (criado na sintaxe [Mermaid](https://mermaid.js.org/)), uma alternativa open-source e compatível com arquivos Markdown como este.
